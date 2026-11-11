@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Nikah of Shahana & Roshan</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b2a1c;--bg2:#103a27;--card:#0f3323;--gold:#d4af37;--gold2:#f0d77a;--ivory:#f6efd9;--muted:#b9c8b4;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b2a1c;--bg2:#103a27;--card:#0f3323;--gold:#d4af37;--gold2:#f0d77a;--ivory:#f6efd9;--muted:#b9c8b4}}
+:root[data-theme="dark"]{--bg:#0b2a1c;--bg2:#103a27;--card:#0f3323;--gold:#d4af37;--gold2:#f0d77a;--ivory:#f6efd9;--muted:#b9c8b4}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--ivory);font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;text-align:center;overflow-x:hidden}
+body.lock{overflow:hidden;height:100%}
+.script{font-family:'Great Vibes','Brush Script MT',cursive;font-weight:400}
+.ar{font-family:'Amiri','Traditional Arabic',serif;direction:rtl}
+.gold{color:var(--gold)}
+.gt{background:linear-gradient(90deg,var(--gold),var(--gold2),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+/* overlay screens */
+.screen{position:fixed;inset:0;z-index:50;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:calc(24px + env(safe-area-inset-top,0px)) 24px calc(24px + env(safe-area-inset-bottom,0px));
+background:radial-gradient(circle at 50% 30%,var(--bg2),var(--bg) 70%);transition:opacity 1s,transform 1.2s}
+.screen.out{opacity:0;transform:scale(1.08);pointer-events:none}
+.frame{position:absolute;inset:max(14px,env(safe-area-inset-top,0px)) 14px max(14px,env(safe-area-inset-bottom,0px));border:1px solid var(--gold);border-radius:200px 200px 14px 14px;pointer-events:none}
+.frame::after{content:"";position:absolute;inset:8px;border:1px solid rgba(212,175,55,.35);border-radius:192px 192px 8px 8px}
+#cover{justify-content:space-between;text-align:center}
+#cover .top{margin-top:7vh}
+.bis{font-size:34px;line-height:1.4}
+.small{letter-spacing:.35em;text-transform:uppercase;font-size:15px;color:var(--gold2)}
+.the{margin-top:14px;font-size:26px;font-style:italic}
+.names{margin-top:6px}
+.names .script{display:block;font-size:clamp(43px,10vw,65px);line: height 1.5em;}
+.amp{font-size:26px;color:var(--gold);margin:2px 0}
+.btn{font-family:inherit;font-size:18px;letter-spacing:.2em;text-transform:uppercase;color:#1a1403;border:0;padding:15px 34px;border-radius:40px;cursor:pointer;
+background:linear-gradient(135deg,var(--gold2),var(--gold));box-shadow:0 0 0 4px rgba(212,175,55,.2),0 8px 24px rgba(0,0,0,.4);animation:pulse 2.2s infinite;margin-bottom:5vh}
+@keyframes pulse{50%{box-shadow:0 0 0 10px rgba(212,175,55,0),0 8px 24px rgba(0,0,0,.4)}}
+/* loader */
+#loader{opacity:0;pointer-events:none;z-index:60}
+#loader.show{opacity:1;pointer-events:auto}
+#loader.out{opacity:0;pointer-events:none;transform:scale(1.08)}
+.ring{width:150px;height:150px;border-radius:50%;border:2px solid rgba(212,175,55,.25);border-top-color:var(--gold);animation:spin 1.4s linear infinite;position:absolute}
+@keyframes spin{to{transform:rotate(360deg)}}
+.lw{position:relative;width:150px;height:150px;display:flex;align-items:center;justify-content:center}
+.lw .ar{font-size:40px;animation:glow 1.6s ease-in-out infinite alternate}
+@keyframes glow{from{opacity:.5}to{opacity:1;text-shadow:0 0 18px var(--gold)}}
+#loader h2{margin-top:30px;font-size:46px}
+/* main */
+main{opacity:0;transition:opacity 1.2s}
+main.show{opacity:1}
+section{position:relative;padding:70px 24px;max-width:720px;margin:auto}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;background:radial-gradient(circle at 50% 20%,var(--bg2),var(--bg) 75%);max-width:none}
+.hero .names .script{font-size:clamp(46px,13vw,12px)}
+.hero p{max-width:420px;margin-top:14px}
+.hint{position:absolute;bottom:22px;font-size:14px;letter-spacing:.3em;color:var(--gold2);text-transform:uppercase;animation:bob 1.8s infinite}
+@keyframes bob{50%{transform:translateY(8px)}}
+.orn{display:flex;align-items:center;gap:12px;justify-content:center;margin:18px auto;color:var(--gold);max-width:320px}
+.orn::before,.orn::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+.orn::after{transform:scaleX(-1)}
+h3{font-size:clamp(34px,9vw,52px);color:var(--gold2);margin-bottom:8px}
+.family{font-size:24px}.family b{font-weight:600}
+.it{font-style:italic;color:var(--muted)}
+.couple .script{font-size:clamp(44px,12vw,50px);color:var(--gold2);line-height:1.15}
+.with{font-size:24px;margin:6px 0;font-style:italic}
+.cd{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:22px}
+.cd div{background:var(--card);border:1px solid var(--gold);border-radius:14px;padding:16px 4px}
+.cd b{display:block;font-size:clamp(30px,9vw,46px);color:var(--gold2);font-weight:600;line-height:1}
+.cd span{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.cards{display:grid;gap:16px;margin-top:24px}
+.card{background:var(--card);border:1px solid rgba(212,175,55,.6);border-radius:16px;padding:26px 18px;position:relative}
+.card::before{content:"";position:absolute;inset:6px;border:1px solid rgba(212,175,55,.2);border-radius:11px;pointer-events:none}
+.card .ic{font-size:30px}
+.card h4{font-size:15px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin:6px 0;font-weight:600}
+.card p{font-size:24px}
+.link{display:inline-block;margin-top:14px;font-size:16px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold2);border:1px solid var(--gold);padding:10px 22px;border-radius:30px;text-decoration:none}
+footer{padding:60px 24px calc(60px + env(safe-area-inset-bottom,0px));background:var(--bg2)}
+.rv{opacity:0;transform:translateY(30px);transition:opacity 1s,transform 1s}
+.rv.in{opacity:1;transform:none}
+.dust{position:fixed;inset:0;pointer-events:none;z-index:70}
+.dust i{position:absolute;bottom:-10px;width:5px;height:5px;border-radius:50%;background:var(--gold2);opacity:.0;animation:rise linear infinite}
+@keyframes rise{10%{opacity:.8}100%{transform:translateY(-105vh) translateX(20px);opacity:0}}
+@media (min-width:640px){.cards{grid-template-columns:1fr 1fr}.cards .wide{grid-column:span 2}}
+/* colour scheme: cover = gold bg + emerald text; invitation = emerald bg + gold text */
+:root,:root[data-theme="dark"]{--cg1:#f6e3a0;--cg2:#d9b44a;--em:#0a3d2b}
+body{color:var(--gold2)}
+.it{color:var(--gold)}
+#cover{background:linear-gradient(160deg,var(--cg1),var(--cg2) 55%,#c39a28)}
+#cover .small,#cover .the,#cover .bis,#cover .gold,#cover .amp{color:var(--em)}
+#cover .frame{border-color:var(--em)}
+#cover .frame::after{border-color:rgba(10,61,43,.4)}
+#cover .gt{background:linear-gradient(90deg,#06281c,#0f5a3f,#06281c);-webkit-background-clip:text;background-clip:text;color:transparent}
+#cover .btn{background:var(--em);color:var(--gold2);box-shadow:0 0 0 4px rgba(10,61,43,.25),0 8px 24px rgba(0,0,0,.35)}
+.card .ic{display:flex;justify-content:center;margin-bottom:4px}
+.ic svg{width:58px;height:58px;fill:none;stroke:var(--gold2);stroke-width:1.600;stroke-linecap:round;stroke-linejoin:round;animation:iglow 2.400s ease-in-out infinite alternate}
+@keyframes iglow{from{filter:drop-shadow(0 0 2px #d4af37) drop-shadow(0 0 6px rgba(212,175,55,.6))}to{filter:drop-shadow(0 0 6px #f0d77a) drop-shadow(0 0 16px #d4af37) drop-shadow(0 0 26px rgba(240,215,122,.55))}}
+.dust .moon{--mc:var(--gold2);width:1em;height:1em;background:transparent;border-radius:50%;box-shadow:-.28em .16em 0 0 var(--mc);filter:drop-shadow(0 0 6px var(--mc));animation-name:moonrise;animation-timing-function:ease-in-out}
+body.cv .dust .moon{--mc:var(--em)}
+body.cv .dust i{background:var(--em)}
+@keyframes moonrise{0%{transform:translate(0,0) rotate(-25deg);opacity:0}12%{opacity:.9}50%{transform:translate(35px,-55vh) rotate(10deg)}100%{transform:translate(-20px,-110vh) rotate(35deg);opacity:0}}
+.dust .moon.fl{bottom:auto;opacity:.9;animation:mbob 5s ease-in-out infinite alternate;will-change:translate}
+@keyframes mbob{from{transform:rotate(-18deg) translateY(-6px)}to{transform:rotate(14deg) translateY(8px)}}
+body.cv .dust .moon{display:none}
+.fbtn{margin:30px 0 0;animation:pulse 2.2s infinite;margin-top:50px;}
+#fmsg{margin-top:12px;font-size:16px;color:var(--gold);min-height:1.2em}
+#fileBtn {
+  display: inline-block !important;
+  margin-top: 25px !important;
+  text-decoration: none !important;
+}
+
+</style>
+</head>
+<body class="lock cv">
+
+<div class="dust" id="dust"></div>
+
+<!-- COVER -->
+<div class="screen" id="cover">
+  <div class="frame"></div>
+  <div class="top">
+    <div class="bis ar gold">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
+    <p class="small" style="margin-top:22px">The Nikah of</p>
+    <div class="names">
+      <span class="script gt">Shahana </span>
+      <div class="amp">&amp;</div>
+      <span class="script gt">Roshan</span>
+    </div>
+    <p class="the">Sunday, 22 November 2026</p>
+  </div>
+  <button class="btn" id="openBtn">Open Invitation</button>
+</div>
+
+<!-- LOADER -->
+<div class="screen" id="loader">
+  <div class="frame"></div>
+  <div class="lw"><div class="ring"></div><div class="ar gold">ما شاء الله</div></div>
+  <h2 class="script gt">Masha Allah</h2>
+  <p class="it" style="margin-top:6px">Preparing your invitation…</p>
+</div>
+
+<main id="main">
+  <section class="hero">
+    <div class="bis ar gold">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
+    <p class="it" style="margin-top:10px">“In the name of Allah, the most beneficent and most merciful.”</p>
+    <div class="orn">✦</div>
+    <p class="small">The Nikah of</p>
+    <div class="names">
+      <span class="script gt">Dr. Shahana Naushad</span>
+      <div class="amp">&amp;</div>
+      <span class="script gt">Dr. Muhammed Roshan</span>
+    </div>
+    <p class="it">Sunday · 22 November 2026</p>
+    <div class="hint">Scroll ↓</div>
+  </section>
+
+  <section class="rv">
+    <h3 class="script">Counting the days</h3>
+    <p class="it">Until we celebrate together</p>
+    <div class="cd" id="cd">
+      <div><b id="d">00</b><span>Days</span></div>
+      <div><b id="h">00</b><span>Hours</span></div>
+      <div><b id="m">00</b><span>Mins</span></div>
+      <div><b id="s">00</b><span>Secs</span></div>
+    </div>
+    <p id="cdmsg" class="gold" style="margin-top:16px;font-size:24px"></p>
+  </section>
+
+  <section class="rv">
+    <div class="family">
+      <p><b>Mr. Noushad &amp; Mrs. Sadinsha</b></p>
+      <p class="it">Shahana’s, Ayiroor, Varkala</p>
+      <p>Ph: <a href="tel:+919846440267" style="color:inherit;text-decoration:none">9846440267</a></p>
+    </div>
+    <div class="orn">✦</div>
+    <p style="font-size:23px;font-style:italic;max-width:480px;margin:auto">We heartfully invite you and your family to brighten the wedding ceremony of our daughter</p>
+    <div class="couple" style="margin-top:22px">
+      <div class="script">Dr. Shahana Naushad</div>
+      <div class="with">with</div>
+      <div class="script">Dr. Muhammed Roshan</div>
+      <p class="it" style="margin-top:14px;font-size:21px">(S/o. Mr. Mansoor. A &amp; Mrs. Benaseer. M<br>Poikayil House, Nilamel P.O. Kollam)</p>
+    </div>
+  </section>
+
+  <section class="rv">
+    <h3 class="script">Nikah Details</h3>
+    <div class="cards">
+      <div class="card"><div class="ic"><svg viewBox="0 0 48 48"><rect x="6" y="9" width="36" height="33" rx="4"/><path d="M6 19h36M15 4v9M33 4v9"/><path d="M14 27h4M22 27h4M30 27h4M14 34h4M22 34h4"/></svg></div><h4>Date</h4><p>Sunday<br><span class="gold">22 November 2026</span></p><p class="it" style="font-size:18px">11th Jamadul Akhir 1448</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 48 48"><path d="M24 4c-1.5 2-3 3-3 5a3 3 0 0 0 6 0c0-2-1.500-3-3-5z"/><path d="M13 25c0-8 6-10 11-10s11 2 11 10"/><path d="M10 25h28M13 25v17M35 25v17M8 42h32M20 42v-8a4 4 0 0 1 8 0v8"/><path d="M5 14v28M43 14v28M3.500 14h3M41.500 14h3"/></svg></div><h4>Nikah</h4><p>Between<br><span class="gold">11:30 am &amp; 12:00 noon</span></p></div>
+      <div class="card wide"><div class="ic"><svg viewBox="0 0 48 48"><path d="M24 44C14 31 10 25 10 18a14 14 0 0 1 28 0c0 7-4 13-14 26z"/><circle cx="24" cy="18" r="5"/></svg></div><h4>Venue</h4><p>Meva Convention Centre</p><p class="it" style="font-size:20px">Palachira, Varkala</p>
+        <a class="link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Meva+Convention+Centre+Palachira+Varkala">View on Map</a></div>
+    </div>
+  </section>
+
+  <footer class="rv">
+    <div class="orn">✦</div>
+    <p class="small">Sharing happiness</p>
+    <p style="font-size:28px;margin-top:6px">All Family Members</p>
+    <p class="script gt" style="font-size:44px;margin-top:26px">Jazakallah Khair</p>
+    <p class="it" style="margin-top:6px">Your presence and duas will make our day complete.</p>
+    <a href="/images/myw3schoolsimage.jpg" class="btn fbtn" id="fileBtn" download="Invitation.jpg">
+  Download Invitation
+</a>
+
+    <p id="fmsg"></p>
+  </footer>
+</main>
+
+<script>
+(function(){
+  var body=document.body, cover=document.getElementById('cover'), loader=document.getElementById('loader'), main=document.getElementById('main');
+  // gold dust
+  var dust=document.getElementById('dust');
+  for(var i=0;i<22;i++){var e=document.createElement('i');e.style.left=Math.random()*100+'%';e.style.animationDuration=(8+Math.random()*10)+'s';e.style.animationDelay=(-Math.random()*14)+'s';e.style.transform='scale('+(0.6+Math.random())+')';dust.appendChild(e);}
+  var moons=[{ph:0,amp:90,ax:26,l:'82%',t:.16,fs:46},{ph:2.4,amp:70,ax:20,l:'7%',t:.62,fs:30}];
+  moons.forEach(function(m){var el=document.createElement('i');el.className='moon fl';el.style.left=m.l;el.style.top=(m.t*100)+'vh';el.style.fontSize=m.fs+'px';dust.appendChild(el);m.el=el;});
+  function floatMoons(){var s=window.pageYOffset||0;moons.forEach(function(m){m.el.style.translate=(Math.cos(s/300+m.ph)*m.ax)+'px '+(Math.sin(s/260+m.ph)*m.amp)+'px';});}
+  window.addEventListener('scroll',floatMoons,{passive:true});floatMoons();
+  // ADD YOUR FILE LINK HERE (PDF / image URL) – the button opens it in a new tab
+  var FILE_URL='';
+  document.getElementById('fileBtn').addEventListener('click',function(){
+    if(FILE_URL){window.open(FILE_URL,'_blank','noopener');}
+    else{document.getElementById('fmsg').textContent='The file will be available soon, insha Allah.';}
+  });
+  // open flow
+  document.getElementById('openBtn').addEventListener('click',function(){
+    cover.classList.add('out');
+    body.classList.remove('cv');
+    loader.classList.add('show');
+    setTimeout(function(){
+      loader.classList.remove('show');
+      loader.classList.add('out');
+      main.classList.add('show');
+      body.classList.remove('lock');
+      window.scrollTo(0,0);
+      reveal();
+      setTimeout(autoScroll,1800);
+    },3000);
+  });
+  // gentle auto-scroll; stops as soon as the guest touches/scrolls
+  function autoScroll(){
+    var pos=window.pageYOffset||0,last=null,stop=false,speed=55; // px per second
+    function end(){stop=true;['wheel','touchstart','mousedown','keydown'].forEach(function(ev){window.removeEventListener(ev,end)})}
+    ['wheel','touchstart','mousedown','keydown'].forEach(function(ev){window.addEventListener(ev,end,{passive:true})});
+    function step(ts){
+      if(stop)return;
+      if(last===null)last=ts;
+      pos+=(ts-last)/1000*speed;last=ts;
+      var max=document.documentElement.scrollHeight-window.innerHeight;
+      if(pos>=max){window.scrollTo(0,max);end();return;}
+      window.scrollTo(0,pos);
+      requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  // scroll reveal
+  function reveal(){
+    var els=document.querySelectorAll('.rv');
+    if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+    var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}})},{threshold:.15});
+    els.forEach(function(e){io.observe(e)});
+  }
+  // countdown to 22 Nov 2026, 11:30 IST
+  var target=new Date('2026-11-22T11:30:00+05:30').getTime();
+  function pad(n){return n<10?'0'+n:''+n}
+  function tick(){
+    var t=target-Date.now();
+    if(t<=0){['d','h','m','s'].forEach(function(k){document.getElementById(k).textContent='00'});document.getElementById('cdmsg').textContent='Alhamdulillah — the blessed day is here!';return;}
+    document.getElementById('d').textContent=pad(Math.floor(t/864e5));
+    document.getElementById('h').textContent=pad(Math.floor(t%864e5/36e5));
+    document.getElementById('m').textContent=pad(Math.floor(t%36e5/6e4));
+    document.getElementById('s').textContent=pad(Math.floor(t%6e4/1e3));
+  }
+  tick();setInterval(tick,1000);
+})();
+</script>
+</body>
+</html>
